@@ -100,11 +100,11 @@ expected_victimization1 <-tribble(
   "Hispanic", "Hispanic", round(sum(victimization_data$N) * national_census_data$hispanic / (national_census_data$total - national_census_data$other) * national_census_data$hispanic / (national_census_data$total - national_census_data$other))
 )
 expected_victimization1$offender_group <- factor(
-  victimization_data$offender_group,
+  expected_victimization1$offender_group,
   levels = c("White", "Black", "Hispanic")
 )
 expected_victimization1$victim_group <- factor(
-  victimization_data$victim_group,
+  expected_victimization1$victim_group,
   levels = c("Hispanic", "Black", "White")
 )
 
@@ -153,11 +153,11 @@ expected_victimization2 <-tribble(
   "Hispanic", "Hispanic", round(sum(victimization_data$N[victimization_data$offender_group == "Hispanic"]) * national_census_data$hispanic / (national_census_data$total - national_census_data$other))
 )
 expected_victimization2$offender_group <- factor(
-  victimization_data$offender_group,
+  expected_victimization2$offender_group,
   levels = c("White", "Black", "Hispanic")
 )
 expected_victimization2$victim_group <- factor(
-  victimization_data$victim_group,
+  expected_victimization2$victim_group,
   levels = c("Hispanic", "Black", "White")
 )
 
@@ -276,11 +276,11 @@ expected_victimization3 <-tribble(
   "Hispanic", "Hispanic", round(sum(victimization_data$N[victimization_data$offender_group == "Hispanic"]) * exposure_by_group1$hispanic_exposure_hispanic)
 )
 expected_victimization3$offender_group <- factor(
-  victimization_data$offender_group,
+  expected_victimization3$offender_group,
   levels = c("White", "Black", "Hispanic")
 )
 expected_victimization3$victim_group <- factor(
-  victimization_data$victim_group,
+  expected_victimization3$victim_group,
   levels = c("Hispanic", "Black", "White")
 )
 
@@ -329,11 +329,11 @@ expected_victimization4 <-tribble(
   "Hispanic", "Hispanic", round(sum(victimization_data$N) * national_census_data$hispanic / (national_census_data$total - national_census_data$other) * exposure_by_group1$hispanic_exposure_hispanic)
 )
 expected_victimization4$offender_group <- factor(
-  victimization_data$offender_group,
+  expected_victimization4$offender_group,
   levels = c("White", "Black", "Hispanic")
 )
 expected_victimization4$victim_group <- factor(
-  victimization_data$victim_group,
+  expected_victimization4$victim_group,
   levels = c("Hispanic", "Black", "White")
 )
 
